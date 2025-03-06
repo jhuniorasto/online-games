@@ -1,0 +1,176 @@
+/* Estilos generales */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navbar moderno */
+nav {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.3);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+.logo {
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.nav-links a:hover {
+    background: yellow;
+    color: black;
+}
+
+/* Secciones */
+section {
+    padding: 120px 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo para encabezados con emojis */
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 0, 0.8);
+}
+
+#presentacion {
+    background: linear-gradient(135deg, #6a0dad, #3b0081);
+    color: white;
+}
+#presentacion h2::after { content: " 🎮🔥"; }
+
+#areajuegos {
+    background: linear-gradient(135deg, #222, #111);
+}
+#areajuegos h2::after { content: " 🕹️💜"; }
+
+#testirese {
+    background: linear-gradient(135deg, #6a0dad, #3b0081);
+}
+#testirese h2::after { content: " 💬⭐"; }
+
+#contacto, #equipo, #preguntas {
+    background: linear-gradient(135deg, #222, #111);
+}
+#contacto h2::after { content: " 📞✉️"; }
+#equipo h2::after { content: " 🤝💪"; }
+#preguntas h2::after { content: " ❓🤓"; }
+
+/* Botones modernos con emojis */
+button {
+    background: yellow;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(255, 255, 0, 0.6);
+    text-transform: uppercase;
+}
+button:hover {
+    background: #ffcc00;
+    transform: scale(1.08);
+    box-shadow: 0px 8px 20px rgba(255, 255, 0, 0.8);
+}
+button::after {
+    content: " 🎮";
+}
+
+/* Formularios con emoji */
+input, textarea {
+    width: 80%;
+    padding: 14px;
+    margin: 15px 0;
+    border: 3px solid yellow;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #222;
+    color: white;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(255, 255, 0, 0.4);
+}
+input:focus, textarea:focus {
+    border-color: #ffcc00;
+    background-color: #333;
+    outline: none;
+    box-shadow: 0px 6px 15px rgba(255, 255, 0, 0.6);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer con redes sociales */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    box-shadow: 0px -4px 10px rgba(255, 255, 0, 0.3);
+    margin-top: 50px;
+}
+footer a {
+    color: yellow;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 24px;
+    transition: 0.3s;
+}
+footer a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}

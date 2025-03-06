@@ -3,73 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>juegue juegue</title>
-    
+    <title>Juegue Juegue</title>
+    <link href="estilos.css" rel="stylesheet">
+  
 </head>
 <body>
-    <!-- Barra de navegación --> 
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#presentacion" class="logo">Sitio de juegos</a>
-            <div class="menu-toggle">
+            <a href="#presentacion" class="logo">Sitio de Juegos</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="nav-links">
                 <li><a href="#presentacion" class="active">Presentación</a></li>
-                <li><a href="#areajuegos">Area de juegos</a></li>
+                <li><a href="#areajuegos">Área de Juegos</a></li>
                 <li><a href="#testirese">Testimonios y Reseñas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#equipo">Equipo de Trabajo</a></li>
                 <li><a href="#preguntas">Preguntas Frecuentes</a></li>
             </ul>
-            </ul>
         </div>
     </nav>
 
-    <!-- Secciones -->
     <section id="presentacion">
-        <h2>Bienvenido a nuestro sitio de juegos </h2>
-        <p>El objetivo principal es que te diviertas entrando a nuestro mundo, tenemos juego para tí que sabemos que te van a encantar.</p>
-        <p>Espero te lo disfrutes y nos puedas dejar un mensaje de que tal te parecio nustro sitio.</p>
+        <h2>Bienvenido a nuestro sitio de juegos</h2>
+        <p>El objetivo principal es que te diviertas entrando a nuestro mundo. Tenemos juegos para ti que sabemos que te van a encantar.</p>
+        <p>Espero te lo disfrutes y nos puedas dejar un mensaje de qué tal te pareció nuestro sitio.</p>
         <br>
         <p>Tenemos juegos como:</p>
-        <li>Piedra, papel o tijeras</li>
-        <li>Ahorcado</li>
-        <!-- ponerle un enlace directo a los juegos -->
+        <ul>
+            <li>Piedra, papel o tijeras</li>
+            <li>Ahorcado</li>
+        </ul>
     </section>
 
     <section id="areajuegos">
-        <h2>AREA JUEGOS</h2>
-        <p>Juegos</p>
-        <p></p>
+        <h2>Área de Juegos</h2>
+        <p>Explora nuestros juegos y diviértete.</p>
     </section>
 
     <section id="testirese">
         <h2>Testimonios y Reseñas</h2>
-        <p>---</p>
-        <p></p>
+        <p>Déjanos tu opinión sobre nuestros juegos.</p>
     </section>
 
     <section id="contacto">
         <h2>Contáctanos</h2>
-        <p>--</p>
-        <p></p>
+        <p>Escríbenos si tienes alguna duda o sugerencia.</p>
     </section>
 
     <section id="equipo">
         <h2>Equipo de Trabajo</h2>
-        <p>--</p>
-        <p></p>
+        <p>Conoce a las personas detrás de este proyecto.</p>
     </section>
 
     <section id="preguntas">
         <h2>Preguntas Frecuentes</h2>
-        <p>--</p>
-        <p></p>
+        <p>Consulta las preguntas más comunes sobre nuestro sitio.</p>
     </section>
 
- 
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
