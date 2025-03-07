@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegue Juegue</title>
     <link href="estilos.css" rel="stylesheet">
-  
 </head>
 <body>
     <nav id="navbar">
@@ -29,46 +28,155 @@
 
     <section id="presentacion">
         <h2>Bienvenido a nuestro sitio de juegos</h2>
-        <p>El objetivo principal es que te diviertas entrando a nuestro mundo. Tenemos juegos para ti que sabemos que te van a encantar.</p>
-        <p>Espero te lo disfrutes y nos puedas dejar un mensaje de qué tal te pareció nuestro sitio.</p>
-        <br>
-        <p>Tenemos juegos como:</p>
-        <ul>
-            <li>Piedra, papel o tijeras</li>
-            <li>Ahorcado</li>
-        </ul>
+        <div class="parrafos-container">
+            <p>Sumérgete en una experiencia llena de diversión y desafíos. Aquí encontrarás juegos que pondrán a prueba tu ingenio y rapidez.</p>
+            <p>Nos encanta hacerte sonreír. Déjanos tu opinión para seguir mejorando y ofrecerte la mejor experiencia.</p>
+        </div>
+
+        <div class="juegos-container">
+            <div class="juego">
+                <img src="img/memory-game.png" alt="Tres en Raya">
+                <div class="descripcion">Pon a prueba tu memoria emparejando cartas en el menor tiempo posible.</div>
+            </div>
+            <div class="juego">
+                <img src="img/tic-tac-toe.png" alt="Juego de Plataforma">
+                <div class="descripcion">Juego clásico de tres en raya</div>
+            </div>
+            <div class="juego">
+                <img src="img/ppt.png" alt="Piedra, papel o tijera">
+                <div class="descripcion">El clásico juego de Piedra, Papel o Tijera es un desafío simple pero divertido basado en la estrategia y el azar. </div>
+            </div>
+        </div>
+        <div id="div-btn-pres">
+            <button id="btn-presentation" onclick="scrollToSection('#areajuegos')">Jugar Ahora</button>
+            <button id="btn-presentation" onclick="scrollToSection('#testirese')">Dejar Reseña</button>
+        </div>
+
     </section>
 
     <section id="areajuegos">
         <h2>Área de Juegos</h2>
-        <p>Explora nuestros juegos y diviértete.</p>
+        <div class="parrafos-container">
+            <p>Explora nuestros juegos y diviértete.</p>
+        </div>
+        
+        <div class="grid-juegos">
+            <!-- #Juego de tres en raya-->
+            <div class="juego-card">
+                <img src="img/tic-tac-toe.png" alt="Tres en Raya">
+                <h3>Tres en Raya</h3>
+                <button onclick="openModal()">Jugar</button>
+            </div>
+            
+            <div class="modal" id="modal-tic-tac">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="closeModal()">Salir</button>
+                    <h2>Tres en Raya</h2>
+                    <div class="game-container">
+                        <div class="board" id="board">
+                            <div class="cell" onclick="makeMove(0)"></div>
+                            <div class="cell" onclick="makeMove(1)"></div>
+                            <div class="cell" onclick="makeMove(2)"></div>
+                            <div class="cell" onclick="makeMove(3)"></div>
+                            <div class="cell" onclick="makeMove(4)"></div>
+                            <div class="cell" onclick="makeMove(5)"></div>
+                            <div class="cell" onclick="makeMove(6)"></div>
+                            <div class="cell" onclick="makeMove(7)"></div>
+                            <div class="cell" onclick="makeMove(8)"></div>
+                        </div>
+                        <div class="scoreboard">
+                            <p>X: <span id="scoreX">0</span></p>
+                            <p>O: <span id="scoreO">0</span></p>
+                            <button onclick="resetGame()">Reiniciar</button>
+                        </div>
+                    </div>
+                    <p id="winner-message"></p>
+                </div>
+            </div>
+            
+
+            <!-- Juego de plataforma-->
+            <div class="juego-card">
+                <img src="img/ppt.png" alt="Piedra, papel o tijera">
+                <h3>Piedra, papel o tijera</h3>
+                <button onclick="openGameModal()">Jugar</button>
+            </div>
+            <div class="modal-overlay" id="gameModal">
+                <div class="modal-content">
+                    <h2 id="ppt">Piedra, Papel o Tijera</h2>
+                    <div class="choices">
+                        <button onclick="playGame('Piedra')">🪨 Piedra</button>
+                        <button onclick="playGame('Papel')">📄 Papel</button>
+                        <button onclick="playGame('Tijera')">✂️ Tijera</button>
+                    </div>
+                    <p id="result-t"></p>
+                    <div id="content-btn">
+                        <button class="exit-btn" onclick="closeGameModal()">Salir</button>
+                        <button id="retry-btn" onclick="resetGame()" style="display: none;">🔄</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+
+            <!-- Juego de memoria -->
+            <div class="juego-card">
+                <img src="img/memory-game.png" alt="Memory Game">
+                <h3>Memory Game</h3>
+                <button onclick="openMemoryModal()">Jugar</button>
+            </div>
+
+            <div id="memoryModal" class="modal-memory">
+                <div class="modal-content-memory">
+                    <h2>Memory Game</h2>
+                    <div id="memory-game" class="memory-board"></div>
+                    <div id="info">
+                        <p>Puntaje: <span id="score">0</span></p>
+                        <p>Errores: <span id="mistakes">0</span></p>
+                        <p>Tiempo: <span id="timer">60</span> s</p>
+                    </div>
+                    <div id="result">
+                        <p id="result-t"></p>
+                    </div>
+                    <button onclick="restartGame()" id="restart-btn" style="display:none;">🔄</button>
+                    <button onclick="closeMemoryModal()">Salir</button>
+                </div>
+            </div>
+            
+
+        </div>
     </section>
+    
 
     <section id="testirese">
         <h2>Testimonios y Reseñas</h2>
-        <p>Déjanos tu opinión sobre nuestros juegos.</p>
+        <div class="parrafos-container">
+            <p>Déjanos tu opinión sobre nuestros juegos.</p>
+        </div>
     </section>
 
     <section id="contacto">
         <h2>Contáctanos</h2>
-        <p>Escríbenos si tienes alguna duda o sugerencia.</p>
+        <div class="parrafos-container">
+            <p>Escríbenos si tienes alguna duda o sugerencia.</p>
+        </div>
     </section>
 
     <section id="equipo">
         <h2>Equipo de Trabajo</h2>
-        <p>Conoce a las personas detrás de este proyecto.</p>
+        <div class="parrafos-container">
+            <p>Conoce a las personas detrás de este proyecto.</p>
+        </div>
     </section>
 
     <section id="preguntas">
         <h2>Preguntas Frecuentes</h2>
-        <p>Consulta las preguntas más comunes sobre nuestro sitio.</p>
+        <div class="parrafos-container">
+            <p>Consulta las preguntas más comunes sobre nuestro sitio.</p>
+        </div>
     </section>
 
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.nav-links');
-            nav.classList.toggle('show');
-        }
-    </script>
+    <script src="javaScript.js"></script>
 </body>
 </html>
