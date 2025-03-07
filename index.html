@@ -125,6 +125,7 @@
                 <img src="img/memory-game.png" alt="Memory Game">
                 <h3>Memory Game</h3>
                 <button onclick="openMemoryModal()">Jugar</button>
+                <a href="juegos/memory_game/memory_game.html">Jugar</a>
             </div>
 
             <div id="memoryModal" class="modal-memory">
@@ -151,10 +152,29 @@
 
     <section id="testirese">
         <h2>Testimonios y Reseñas</h2>
-        <div class="parrafos-container">
-            <p>Déjanos tu opinión sobre nuestros juegos.</p>
-        </div>
+        <form id="reseñas">
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" name="nombre" id="nombre">
+
+            <br>
+            <br>
+
+            <label for="correo">Correo electronico:</label>
+            <input type="email" name="correo" id="correo">
+
+            <br>
+            <br>
+
+            <label for="comentario">Escribe tu comentario:</label><br>
+            <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+
+            <button type="button" onclick="agregarComentario()">Enviar</button>
+            <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
+
+
+        </form>
     </section>
+
 
     <section id="contacto">
         <h2>Contáctanos</h2>
