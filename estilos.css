@@ -10,14 +10,14 @@ body {
 
 /* Navbar moderno */
 nav {
-    background: rgba(255, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(255, 255, 0, 0.3);
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
 }
 
 .nav-container {
@@ -61,16 +61,16 @@ nav {
 }
 
 .nav-links a:hover {
-    background: yellow;
+    background: rgb(255, 255, 255);
     color: black;
-    border: 2px solid yellow; /* Contorno completo */
+    border: 2px solid rgb(255, 255, 255); /* Contorno completo */
     border-radius: 5px;
 }
 
 
 
 .logo {
-    color: yellow;
+    color:  rgb(212, 0, 255);
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
@@ -96,13 +96,14 @@ h2 {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 10px rgba(255, 255, 0, 0.8);
+    text-shadow: 2px 2px 10px  rgb(212, 0, 255);
     text-align: center;
 }
 
 #presentacion {
-    background: linear-gradient(135deg, #6a0dad, #3b0081);
+    background: linear-gradient(135deg, #280c97, #06085e);
     color: white;
+   
     justify-content: center;
     align-items: center;
     border-radius: 20px;
@@ -110,10 +111,11 @@ h2 {
 }
 
 #presentacion h2::after {
+    
     content: " 🎮🔥";
 }
 
-/* Contenedor de párrafos en fila */
+/* Contenedor de     párrafos en fila */
 #presentacion .parrafos-container {
     display: flex;          /* Permite la disposición en fila */
     justify-content: center; /* Centra los párrafos */
@@ -127,11 +129,12 @@ p {
     font-size: 1.2rem;
     line-height: 1.8;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 5px rgba(0, 255, 255, 0.7);
+    text-shadow: 1px 1px 5px #e94560;
     font-weight: bold;
     padding: 10px;
-    border-left: 5px solid yellow;
-    background: rgba(0, 0, 0, 0.5);
+
+    border-left: 5px solid rgb(212, 0, 255);
+    background: #1a1a2e;
     border-radius: 10px;
     display: inline-block;
     max-width: 400px; /* Ajuste para que los párrafos no sean tan grandes */
@@ -145,17 +148,20 @@ p:hover {
 
 
 #areajuegos {
-    background: linear-gradient(135deg, #222, #111);
+    background: linear-gradient(135deg, #000000ce, #111);
 }
 #areajuegos h2::after { content: " 🕹️💜"; }
 
 #testirese {
-    background: linear-gradient(135deg, #6a0dad, #3b0081);
+    background: linear-gradient(135deg, #280c97, #06085e);
 }
 #testirese h2::after { content: " 💬⭐"; }
 
-#contacto, #equipo, #preguntas {
-    background: linear-gradient(135deg, #222, #111);
+#equipo {
+background: linear-gradient(135deg, #280c97, #06085e);
+}
+#contacto, #preguntas {
+    background: linear-gradient(135deg, #000000ce, #111);
 }
 #contacto h2::after { content: " 📞✉️"; }
 #equipo h2::after { content: " 🤝💪"; }
@@ -163,7 +169,7 @@ p:hover {
 
 /* Botones modernos con emojis */
 button {
-    background: yellow;
+    background:  rgb(212, 0, 255);
     color: black;
     border: none;
     padding: 15px 30px;
@@ -172,13 +178,13 @@ button {
     cursor: pointer;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
-    box-shadow: 0px 6px 15px rgba(255, 255, 0, 0.6);
+    box-shadow: 0px 6px 15px rgb(255, 255, 255);
     text-transform: uppercase;
 }
 button:hover {
-    background: #ffcc00;
+    background:  rgb(212, 0, 255);
     transform: scale(1.08);
-    box-shadow: 0px 8px 20px rgba(255, 255, 0, 0.8);
+    box-shadow: 0px 8px 20px rgb(255, 255, 255);
 }
 button::after {
     content: " 🎮";
@@ -206,19 +212,19 @@ input, textarea {
     width: 80%;
     padding: 14px;
     margin: 15px 0;
-    border: 3px solid yellow;
+    border: 3px solid  rgb(212, 0, 255);
     border-radius: 10px;
     font-size: 18px;
     background-color: #222;
     color: white;
     transition: 0.3s;
-    box-shadow: 0px 4px 10px rgba(255, 255, 0, 0.4);
+    box-shadow: 0px 4px 10px rgb(255, 255, 255);
 }
 input:focus, textarea:focus {
-    border-color: #ffcc00;
+    border-color:  rgb(212, 0, 255);
     background-color: #333;
     outline: none;
-    box-shadow: 0px 6px 15px rgba(255, 255, 0, 0.6);
+    box-shadow: 0px 6px 15px rgb(255, 255, 255);
 }
 
 /* Animaciones */
@@ -240,18 +246,18 @@ footer {
     text-align: center;
     padding: 20px 0;
     font-size: 18px;
-    box-shadow: 0px -4px 10px rgba(255, 255, 0, 0.3);
+    box-shadow: 0px -4px 10px rgb(255, 255, 255);
     margin-top: 50px;
 }
 footer a {
-    color: yellow;
+    color:  rgb(212, 0, 255);
     text-decoration: none;
     margin: 0 15px;
     font-size: 24px;
     transition: 0.3s;
 }
 footer a:hover {
-    color: #ffcc00;
+    color:  rgb(212, 0, 255);
     transform: scale(1.1);
 }
 
@@ -275,12 +281,12 @@ body {
 .juego {
     width: 300px;
     height: 400px;
-    border: 5px solid yellow;
+    border: 5px solid  rgb(212, 0, 255);
     border-radius: 15px;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease-in-out;
-    box-shadow: 0px 10px 20px rgba(255, 255, 0, 0.6);
+    box-shadow: 0px 10px 20px rgb(255, 255, 255);
 }
 
 .juego img {
@@ -297,7 +303,7 @@ body {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
-    color: yellow;
+    color:  rgb(212, 0, 255);
     width: 100%;
     padding: 20px;
     text-align: center;
@@ -326,7 +332,7 @@ body {
 }
 
 button {
-    background: yellow;
+    background:  rgb(212, 0, 255);
     color: black;
     border: none;
     padding: 15px 30px;
@@ -335,14 +341,14 @@ button {
     cursor: pointer;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
-    box-shadow: 0px 6px 15px rgba(255, 255, 0, 0.6);
+    box-shadow: 0px 6px 15px rgb(255, 255, 255);
     text-transform: uppercase;
 }
 
 button:hover {
-    background: #ffcc00;
+    background:  rgb(212, 0, 255);
     transform: scale(1.08);
-    box-shadow: 0px 8px 20px rgba(255, 255, 0, 0.8);
+    box-shadow: 0px 8px 20px rgb(255, 255, 255);
 }
 
 button::after {
@@ -425,7 +431,7 @@ button::after {
     max-width: 600px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
     overflow: hidden;
 }
 
@@ -465,23 +471,23 @@ button::after {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color: yellow;
+    color:  rgb(212, 0, 255);
     cursor: pointer;
-    border: 2px solid yellow;
+    border: 2px solid  rgb(212, 0, 255);
 }
 
 .scoreboard {
     width: 30%;
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
-    border: 2px solid yellow;
+    border: 2px solid  rgb(212, 0, 255);
     text-align: center;
 }
 
 #winner-message {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: yellow;
+    color:  rgb(212, 0, 255);
 }
 
 
@@ -503,7 +509,7 @@ button::after {
     width: 400px;
     padding: 20px;
     background: #333;
-    color: white;
+    color: rgb(212, 0, 255);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
