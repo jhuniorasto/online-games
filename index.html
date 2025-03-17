@@ -16,12 +16,11 @@
                 <span></span>
             </div>
             <ul class="nav-links">
-                <li><a href="#presentacion" class="active">Presentación</a></li>
-                <li><a href="#areajuegos">Área de Juegos</a></li>
-                <li><a href="#testirese">Testimonios y Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#equipo">Equipo de Trabajo</a></li>
-                <li><a href="#preguntas">Preguntas Frecuentes</a></li>
+                <li><a onclick="scrollToSection('#presentacion')" class="active">Presentación</a></li>
+                <li><a onclick="scrollToSection('#areajuegos')" >Área de Juegos</a></li>
+                <li><a onclick="scrollToSection('#testirese')">Testimonios y Reseñas</a></li>
+                <li><a onclick="scrollToSection('#contacto')">Equipo de trabajo</a></li>
+                <li><a onclick="scrollToSection('#preguntas')">Preguntas Frecuentes</a></li>
             </ul>
         </div>
     </nav>
@@ -87,12 +86,13 @@
                         <div class="scoreboard">
                             <p>X: <span id="scoreX">0</span></p>
                             <p>O: <span id="scoreO">0</span></p>
-                            <button onclick="resetGame()">Reiniciar</button>
+                            <button id="reset" onclick="resetGame()">Reiniciar</button>
                         </div>
                     </div>
                     <p id="winner-message"></p>
                 </div>
             </div>
+            
             
 
             <!-- Juego de plataforma-->
@@ -124,8 +124,7 @@
             <div class="juego-card">
                 <img src="img/memory-game.png" alt="Memory Game">
                 <h3>Memory Game</h3>
-                <button onclick="openMemoryModal()">Jugar</button>
-                <a href="juegos/memory_game/memory_game.html">Jugar</a>
+                <a href="juegos/memory_game/memory_game.html"> <button>Jugar</button></a>
             </div>
 
             <div id="memoryModal" class="modal-memory">
@@ -155,47 +154,89 @@
         <form id="reseñas">
             <label for="nombre">Nombre de usuario:</label>
             <input type="text" name="nombre" id="nombre">
-
-            <br>
-            <br>
-
-            <label for="correo">Correo electronico:</label>
+            <pre></pre>
+            <label for="correo">Correo electrónico:</label>
             <input type="email" name="correo" id="correo">
-
-            <br>
-            <br>
-
-            <label for="comentario">Escribe tu comentario:</label><br>
-            <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
-
-            <button type="button" onclick="agregarComentario()">Enviar</button>
-            <button type="button" onclick="limpiarCampos()">Limpiar Campos</button>
-
-
+            <pre></pre>
+            <label for="comentario">Escribe tu comentario:</label>
+            <textarea  id="comentario" name="comentario" rows="3" cols="50"></textarea>
+            <label for="calificacion">Calificación:</label>
+            <div class="estrellas">
+                <span class="estrella" data-valor="1">★</span>
+                <span class="estrella" data-valor="2">★</span>
+                <span class="estrella" data-valor="3">★</span>
+                <span class="estrella" data-valor="4">★</span>
+                <span class="estrella" data-valor="5">★</span>
+            </div>
+            <pre></pre>
+            <button type="button" onclick="agregarComentario()">ENVIAR 🎮</button>
+            <pre></pre>
         </form>
+    
+        <div id="contenedor-comentarios"></div>
     </section>
-
-
+    
+    
     <section id="contacto">
-        <h2>Contáctanos</h2>
+        <h2>EQUIPO DE TRABAJO</h2>
         <div class="parrafos-container">
             <p>Escríbenos si tienes alguna duda o sugerencia.</p>
         </div>
-    </section>
 
-    <section id="equipo">
-        <h2>Equipo de Trabajo</h2>
-        <div class="parrafos-container">
-            <p>Conoce a las personas detrás de este proyecto.</p>
+        <div class="cont-integrantes">
+
+            <div class="juego-card">
+                <img src="img/ft-cristhian.jpg" alt="Cristian Silva">
+                <h3>Cristian Silva</h3>
+                <a href="" target="_blank">
+                    <button>Ver CV</button>
+                </a>
+            </div>
+            
+            <div class="juego-card">
+                <img src="img/ft-caro.jpg" alt="Karolina Dorado">
+                <h3>Karolina Dorado</h3>
+                <a href="cv/cv-caro.pdf" target="_blank">
+                    <button>Ver CV</button>
+                </a>
+            </div>
+            
+            <div class="juego-card">
+                <img src="img/ft-jhunior.jpg" alt="Jhunior Asto">
+                <h3>Jhunior Asto</h3>
+                <a href="cv/cv-jhunior.pdf" target="_blank">
+                    <button>Ver CV</button>
+                </a>
+            </div>
+            
         </div>
+
+        
+
     </section>
 
     <section id="preguntas">
         <h2>Preguntas Frecuentes</h2>
-        <div class="parrafos-container">
-            <p>Consulta las preguntas más comunes sobre nuestro sitio.</p>
+        <div id="p-preguntas">
+            <p>Consulta las preguntas más comunes sobre nuestro sitio.</>
+        </div>
+        <div class="faq-container">
+            <div class="faq-list">
+                <button class="faq-question" data-index="0">¿Los juegos son gratuitos?<span class="icon">▶</span></button>
+                <button class="faq-question" data-index="1">¿Necesito descargar algo para jugar?<span class="icon">▶</span></button>
+                <button class="faq-question" data-index="2">¿Puedo jugar desde mi celular?<span class="icon">▶</span></button>
+                <button class="faq-question" data-index="3">¿Qué hago si un juego no carga?<span class="icon">▶</span></button>
+                <button class="faq-question" data-index="4">¿Cuáles son los requisitos para jugar?<span class="icon">▶</span></button>
+                <button class="faq-question" data-index="5">¿Habrá nuevos juegos en el futuro?<span class="icon">▶</span></button>
+                <button class="faq-question" data-index="6">¿Puedo sugerir un juego o reportar un problema?<span class="icon">▶</span></button>
+            </div>
+    
+            <div class="faq-answer-container">
+                <p class="faq-answer-text">Selecciona una pregunta para ver la respuesta.</p>
+            </div>
         </div>
     </section>
+    
 
     <script src="javaScript.js"></script>
 </body>

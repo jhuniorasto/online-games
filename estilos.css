@@ -147,13 +147,211 @@ p:hover {
     transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
 
+/*Diseño de sección contactos*/
+.cont-integrantes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptable a diferentes tamaños */
+    gap: 30px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#contacto img{
+    width: 100%;
+    height: 350px; /* Ajusta según sea necesario */
+    object-fit: cover; /* Mantiene proporciones y llena el espacio */
+    object-position: center; /* Centra la imagen en la parte superior */
+    display: block;
+}
+
+
+/*Diseño de testimonios y reseñas*/
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #7D00FF;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+
+/* Contenedor de comentarios en fila */
+#contenedor-comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar los comentarios */
+    gap: 15px; /* Espacio entre los comentarios */
+    padding: 20px;
+}
+
+/* Diseño de cada comentario */
+.testimonio {
+    background: linear-gradient(to bottom, #fffffff8, #ceccccce);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px #7D00FF;
+    text-align: center;
+    width: 250px; /* Ancho fijo para que todos sean del mismo tamaño */
+    max-width: 250px;
+    min-height: 150px; /* Evitar que tengan tamaños distintos */
+}
+
+/* Diseño de las tarjetas de comentario */
+
+.testimonio .nombre {
+    font-weight: bold;
+    background: #5A00A8;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.testimonio .comentario {
+    background: black;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.testimonio .calificacion {
+    background: #222;
+    padding: 5px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Diseño de estrellas */
+.estrellas {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.estrellas .estrella {
+    color: gray;
+    transition: 0.3s;
+}
+
+.estrellas .estrella.seleccionada {
+    color: gold;
+}
+
+/* Fin de diseño de testimonios y reseñas*/
+
+/* Inicio de diseño de  FAQ */
+#preguntas {
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#p-preguntas{
+    justify-content: center;
+    text-align: center;
+}
+
+.faq-container {
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-list {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-question {
+    background: #ffffff;
+    color: #1e1e2f;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    transition: transform 0.2s, background 0.3s, padding 0.3s;
+}
+
+.faq-question:hover {
+    background: #3012b8;
+}
+
+.faq-question:active {
+    transform: scale(0.97);
+}
+
+.icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.faq-answer-container {
+    width: 60%;
+    margin-left: 30px;
+    background: #252545;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.3s, transform 0.3s, max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.faq-answer-container.active {
+    opacity: 1;
+    transform: translateX(0);
+    max-height: 100px;
+}
+
+.faq-answer-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Fin de diseño de  FAQ */
+
 
 #areajuegos {
     background: linear-gradient(135deg, #000000ce, #111);
 }
 #areajuegos h2::after { content: " 🕹️💜"; }
 
-#testirese {
+#testirese, #preguntas {
     background: linear-gradient(135deg, #280c97, #06085e);
 }
 #testirese h2::after { content: " 💬⭐"; }
@@ -161,11 +359,12 @@ p:hover {
 #equipo {
 background: linear-gradient(135deg, #280c97, #06085e);
 }
-#contacto, #preguntas {
+#contacto {
     background: linear-gradient(135deg, #000000ce, #111);
 }
-#contacto h2::after { content: " 📞✉️"; }
-#equipo h2::after { content: " 🤝💪"; }
+
+
+#contacto h2::after { content: " 🤝💪"; }
 #preguntas h2::after { content: " ❓🤓"; }
 
 /* Botones modernos con emojis */
@@ -208,26 +407,26 @@ button::after {
     align-items: center;
 }
 
-/* Formularios con emoji */
+/* Ajustes generales */
 input, textarea {
-    width: 80%;
-    padding: 14px;
-    margin: 15px 0;
-    border: 3px solid  #3012b8;
-    border-radius: 10px;
-    font-size: 18px;
-    background-color: #222;
-    color: #ffffff;
-    transition: 0.3s;
-    box-shadow: 0px 4px 10px #3012b8;
-}
-input:focus, textarea:focus {
-    border-color: #3012b8;
-    background-color: #333;
-    outline: none;
-    box-shadow: 0px 6px 15px #3012b8;
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #7D00FF;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
 }
 
+textarea {
+    resize: none; /* Evita que el usuario cambie el tamaño manualmente */
+}
+
+input:focus, textarea:focus {
+    border-color: #8A2BE2;
+    background-color: #333;
+    outline: none;
+    box-shadow: 0px 6px 15px #8A2BE2;
+}
 /* Animaciones */
 @keyframes fadeIn {
     from {
@@ -390,7 +589,7 @@ button::after {
 .juego-card h3 {
     margin: 15px 0;
     font-size: 24px;
-    color: #ffffff;
+    color:#3012b8;
 }
 
 .juego-card button {
@@ -435,40 +634,24 @@ button::after {
     background: #0f3460;
     padding: 20px;
     width: 90%;
-    max-width: 600px;
+    max-width: 400px;
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 15px #ffffff;
-    overflow: hidden;
-}
-
-.close-btn:hover{
-    background:  #000000;
-    transform: scale(1.08);
-    color: white;
-    box-shadow: 0px 8px 20px #ffffff;
-}
-
-.close-btn {
-    box-shadow: 0px 6px 15px rgba(252, 2, 2, 0.6);
-    background: #3012b8;
-    color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .game-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 60%;
+    gap: 5px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .cell {
@@ -479,24 +662,16 @@ button::after {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    color:  #3012b8;
+    color: #3012b8;
     cursor: pointer;
-    border: 2px solid  #3012b8;
+    border: 2px solid #3012b8;
 }
 
-.scoreboard {
-    width: 30%;
-    background: rgba(26, 26, 46, 0.7);
-    padding: 10px;
-    border: 2px solid  #3012b8;
+.scoreboard{
+    margin-top: 15px;
+    gap: 30px;
+    width: 100%;
     text-align: center;
-    color: #ffffff;
-}
-
-#winner-message {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color:  #3012b8;
 }
 
 
